@@ -2,6 +2,7 @@
   align-items: center;
   margin: 0;
   padding: 0;
+  place-items: stretch;
 }
 
 .article {
@@ -75,14 +76,12 @@
 }
 
 .menu ul {
-  display: grid;
   grid-template-columns: repeat(4, 1fr);
 }
 
 .menu ul,
 .menu li {
   font-size: 16px;
-  list-style: none;
 }
 
 .nav {
@@ -91,15 +90,30 @@
   grid-row: 2;
 }
 
+.nav ul {
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-around;
+}
+
 .nav ul li {
   font-size: 16px;
   text-transform: uppercase;
 }
 
 .sidebar {
+  align-content: stretch;
   background-color: #FF7755;
+  display: grid;
+  gap: 50px;
   grid-column: 1;
   grid-row: 2 / -2;
+  justify-content: stretch;
+}
+
+.sidebar * {
+  align-content: center;
+  display: grid;
+  justify-content: center;
 }
 
 .sidebar .photo {
@@ -115,4 +129,9 @@
   color: black;
   font-size: 16px;
   font-weight: normal;
+}
+
+ul {
+  display: grid;
+  list-style: none;
 }
